@@ -5,41 +5,29 @@
 
 using namespace std;
 
-class produto
-{
+class produto{
 
 	protected:
-		string nome;
-		float preco;
-		string marca;
-		string descricao;
-		int data_fab;
+		string Nome;
+		float Preco;
+		string Marca;
+		string Descricao;
+		int Data_fab;
 
 	public:
-		produto();
-		~produto();
+
+		string getNome();
+		float getPreco();
+		string getMarca();
+		string getDescricao();
+		int getData_fab();
+
+		void setNome(string nome);
+		void setPreco(float preco);
+		void setMarca(string marca);
+		void setDescricao(string descricao);
+		void setData_fab(int data_fab);
 	
-};
-
-
-class produto_duravel{
-	private:
-		string material_pred;
-		int durabilidade;
-	public:
-		produto_duravel();
-		~produto_duravel();
-
-};
-
-class produto_nao_duravel{
-	private:
-		string genero;
-		int validade;
-	public:
-		produto_nao_duravel();
-		~produto_nao_duravel();
-
 };
 
 #endif  
