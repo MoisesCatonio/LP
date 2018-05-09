@@ -4,7 +4,7 @@
 PROG = bin/prog
 CC = g++
 CPPFLAGS = -O0 -g -W -Wall -pedantic -std=c++11 -Iinclude
-OBJS = main.o produto.o produto_derivado.o produtos_duraveis.o produtos_nao_duraveis.o deposito.o
+OBJS = main.o produto.o produto_derivado.o produtos_duraveis.o produtos_nao_duraveis.o deposito.o menu.o
 RM = -f *.o
 
 $(PROG) : $(OBJS)
@@ -28,6 +28,9 @@ produtos_nao_duraveis.o : include/produtos_nao_duraveis.hpp
 
 deposito.o : include/deposito.hpp
 	$(CC) $(CPPFLAGS) -c src/deposito.cpp
+
+menu.o : include/menu.hpp
+	$(CC) $(CPPFLAGS) -c src/menu.cpp
 
 clean:
 	rm -f $(PROG) build/*.o

@@ -22,6 +22,7 @@ class produto{
 		string getDescricao();
 		int getData_fab();
 
+
 		void setNome(string nome);
 		void setPreco(float preco);
 		void setMarca(string marca);

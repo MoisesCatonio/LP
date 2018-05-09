@@ -14,8 +14,8 @@ void deposito::exibirNomeProduto(int indice){
 
 void deposito::exibirCatalogo(){
 	for(int i = 0; i < (int)produtos.size(); i++){
-		auto x = *produtos[i];
-		cout<<typeid(x).name();
+		auto x = produtos[i]->getNome();
+		cout<<x;
 		cout<<endl;
 	}
 }
@@ -38,6 +38,17 @@ void deposito::isEmpty(){
 	}
 }
 
-void maisCaro(){
+void deposito::maisCaro(){
+	int indice = 0;
+	for(int i = 0; i < (int) produtos.size()-1; i++){
+		if (produtos[i]->getPreco() < produtos[i+1]->getPreco())
+		{
+			indice = i+1;
+		} else {
+			indice = i;
+		}
+	}
+
+	cout<<"O produto mais caro é: " << produtos[indice]->getNome() << endl;
 
 }
